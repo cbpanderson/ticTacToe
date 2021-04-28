@@ -1,0 +1,63 @@
+.gameBox{
+    height: 600px;
+    width: 600px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+
+}
+
+button{
+    margin: 0 auto; /* This will center the border. */
+    width: 20%; /* Change this to whatever width you want. */;
+    margin-top: 2%;
+    box-shadow: 2px 3px;
+}
+.mainContainer{
+    display: flex;
+}
+
+.rightSide{
+    margin-left: 4%;
+    margin-top: 5%;
+}
+
+.leftSide{
+    width: 600px;
+    margin-left: 10%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameBoxCol{
+    height: 600px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameBoxIndiv{
+    height:200px;
+    width: 200px; 
+}
+
+.bottomBorder{
+    border-bottom: solid red; 
+}
+
+.shortBottomBorder{
+    border-bottom: solid blue; 
+    width: 90%;
+
+
+}
+
+.rightBorder{
+    border-right: solid red; 
+}
+
+h2{
+    font-size: 24pt;
+}
+
