@@ -46,12 +46,6 @@ button{
     border-bottom: solid red; 
 }
 
-.shortBottomBorder{
-    border-bottom: solid blue; 
-    width: 90%;
-
-
-}
 
 .rightBorder{
     border-right: solid red; 
@@ -61,3 +55,9 @@ h2{
     font-size: 24pt;
 }
 
+.played{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:  36pt;
+}

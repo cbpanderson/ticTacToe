@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ticTacToe.css">
     <title>Tic Tac Toe Game</title>
+
 </head>
 <body>
    <div class="mainContainer">
@@ -13,27 +14,27 @@
             <span class="winMessage"></span>
             <div class="gameBox">
                 <div class="gameBoxCol">
-                    <div id="box1" class="shortBottomBorder rightBorder gameBoxIndiv">
+                    <div id="1" class="bottomBorder rightBorder gameBoxIndiv" onclick="getClickLocation(1)">
                     </div>
-                    <div id="box2" class="shortBottomBorder rightBorder gameBoxIndiv">
+                    <div id="2" class="bottomBorder rightBorder gameBoxIndiv" onclick="getClickLocation(2)">
                     </div>
-                    <div id="box3" class="rightBorder gameBoxIndiv">
+                    <div id="3" class="rightBorder gameBoxIndiv" onclick="getClickLocation(3)">
                     </div>
                 </div>
                 <div class="gameBoxCol">
-                    <div id="box4" class="bottomBorder rightBorder gameBoxIndiv">
+                    <div id="4" class="bottomBorder rightBorder gameBoxIndiv" onclick="getClickLocation(4)">
                     </div>
-                    <div id="box5" class="bottomBorder rightBorder gameBoxIndiv">
+                    <div id="5" class="bottomBorder rightBorder gameBoxIndiv" onclick="getClickLocation(5)">
                     </div>
-                    <div id="box6" class="rightBorder gameBoxIndiv">
+                    <div id="6" class="rightBorder gameBoxIndiv" onclick="getClickLocation(6)">
                     </div>
                 </div> 
                 <div class="gameBoxCol">
-                    <div id="box7" class="shortBottomBorder gameBoxIndiv">
+                    <div id="7" class="bottomBorder gameBoxIndiv" onclick="getClickLocation(7)">
                     </div>
-                    <div id="box8" class="shortBottomBorder gameBoxIndiv">
+                    <div id="8" class="bottomBorder gameBoxIndiv" onclick="getClickLocation(8)">
                     </div>
-                    <div id="box9" class="gameBoxIndiv">
+                    <div id="9" class="gameBoxIndiv" onclick="getClickLocation(9)">
                     </div>
                 </div>
             </div>
@@ -42,15 +43,11 @@
         <div class="rightSide">
             <div class="stats">
                 <h2>Stats</h2>
-                <p class="playerX">Player X:</p>
-                <p class="playerO">Player O:</p>
+                <p id="xWins">Player X:</p>
+                <p id="yWins">Player O:</p>
             </div>
         </div>
     </div>
-
     <script src="ticTacToe.js"></script>
-    <script>
-
-    </script>
 </body>
 </html>
