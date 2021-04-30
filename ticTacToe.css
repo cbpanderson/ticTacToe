@@ -40,16 +40,17 @@ button{
 .gameBoxIndiv{
     height:200px;
     width: 200px; 
+    border: solid black;
 }
 
-.bottomBorder{
+/* .bottomBorder{
     border-bottom: solid red; 
 }
 
 
 .rightBorder{
     border-right: solid red; 
-}
+} */
 
 h2{
     font-size: 24pt;
