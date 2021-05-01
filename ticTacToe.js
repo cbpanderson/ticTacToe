@@ -1,6 +1,6 @@
 var clickCount = 1;
-var xWins = 0;
-var oWins = 0;
+var XWins = 0;
+var OWins = 0;
 var currGame = ["","","","","","","","",""];
 var currNum;
 
@@ -33,51 +33,59 @@ var currNum;
 
   function storeScore(letter){
     currGame[currNum] = letter;
-    // checkForWin();
+    var playerWhoWon = checkForWin();
+    if(playerWhoWon){
+      addWinToScoreboard(playerWhoWon);
+    }
   }
 
   function checkForWin(){
-    // const lines = [
-    //   [0, 1, 2],
-    //   [3, 4, 5],
-    //   [6, 7, 8],
-    //   [0, 3, 6],
-    //   [1, 4, 7],
-    //   [2, 5, 8],
-    //   [0, 4, 8],
-    //   [2, 4, 6],
-    // ];
-    // for (let i = 0; i < lines.length; i++) {
-    //   const [a, b, c] = lines[i];
-    //   if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-    //     return squares[a];
-    //   }
-    // }
-    // return null;
-  
-
-
-    // //if winner:
-    // document.getElementById(winMessage).innerHTML = 'Winner!';
-    // //who won
-    // var playerWhoWon = "";
-    // addWinToScoreboard(playerWhoWon);
-
+    const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      if (currGame[a] && currGame[a] === currGame[b] && currGame[a] === currGame[c]) {
+        document.getElementById("winMessage").innerHTML = 'Winner!';//add styling
+        if (currGame[a] === 'X'){
+          XWins++;
+        }
+        else if(currGame[a] === 'O'){
+          OWins++;
+        }
+        
+        return currGame[a];
+      }
+    }
+    return null;
   }
 
-  //add to this
-  // function addWinToScoreboard(player){
-
-  //   document.getElementById(player+"Wins").innerHTML = "Player "+player+":"+`{player}+"Wins"`;
-  // }
+function addWinToScoreboard(player){
+  var playerScore = "";
+  if (player === 'X'){
+    playerScore = XWins;
+  }
+  else if(player === 'O'){
+    playerScore = OWins;
+  }
+  document.getElementById(`${player}Wins`).innerHTML = "Player "+player+": "+playerScore;
+}
 
   function clearBoard(){
     currGame = ["","","","","","","","",""];
-    var i=1;
-    while (i <= 9){
+    var i=0;
+    while (i <= 8){
       var currDiv = document.getElementById(i); 
       currDiv.innerHTML = "";
       currDiv.className = "gameBoxIndiv";
       i++;
     }
+    document.getElementById("winMessage").innerHTML = "";
   }
